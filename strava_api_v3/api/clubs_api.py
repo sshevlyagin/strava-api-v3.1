@@ -38,20 +38,20 @@ class ClubsApi(object):
 
         Retrieve recent activities from members of a specific club. The authenticated athlete must belong to the requested club in order to hit this endpoint. Pagination is supported. Enhanced Privacy Mode is respected for all activities.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_club_activities_by_id(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_club_activities_by_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the club. (required)
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryActivity]
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_club_activities_by_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_club_activities_by_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -62,21 +62,21 @@ class ClubsApi(object):
 
         Retrieve recent activities from members of a specific club. The authenticated athlete must belong to the requested club in order to hit this endpoint. Pagination is supported. Enhanced Privacy Mode is respected for all activities.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_club_activities_by_id_with_http_info(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_club_activities_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the club. (required)
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryActivity]
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['id', 'page', 'per_page']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -130,7 +130,7 @@ class ClubsApi(object):
             files=local_var_files,
             response_type='list[SummaryActivity]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -141,20 +141,20 @@ class ClubsApi(object):
 
         Returns a list of the administrators of a given club.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_club_admins_by_id(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_club_admins_by_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the club. (required)
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryAthlete]
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_club_admins_by_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_club_admins_by_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -165,21 +165,21 @@ class ClubsApi(object):
 
         Returns a list of the administrators of a given club.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_club_admins_by_id_with_http_info(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_club_admins_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the club. (required)
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryAthlete]
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['id', 'page', 'per_page']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -233,7 +233,7 @@ class ClubsApi(object):
             files=local_var_files,
             response_type='list[SummaryAthlete]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -244,18 +244,18 @@ class ClubsApi(object):
 
         Returns a given club using its identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_club_by_id(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_club_by_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the club. (required)
         :return: DetailedClub
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_club_by_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_club_by_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -266,19 +266,19 @@ class ClubsApi(object):
 
         Returns a given club using its identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_club_by_id_with_http_info(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_club_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the club. (required)
         :return: DetailedClub
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -328,7 +328,7 @@ class ClubsApi(object):
             files=local_var_files,
             response_type='DetailedClub',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -339,20 +339,20 @@ class ClubsApi(object):
 
         Returns a list of the athletes who are members of a given club.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_club_members_by_id(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_club_members_by_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the club. (required)
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryAthlete]
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_club_members_by_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_club_members_by_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -363,21 +363,21 @@ class ClubsApi(object):
 
         Returns a list of the athletes who are members of a given club.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_club_members_by_id_with_http_info(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_club_members_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the club. (required)
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryAthlete]
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['id', 'page', 'per_page']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -431,7 +431,7 @@ class ClubsApi(object):
             files=local_var_files,
             response_type='list[SummaryAthlete]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -442,19 +442,19 @@ class ClubsApi(object):
 
         Returns a list of the clubs whose membership includes the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_logged_in_athlete_clubs(async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_logged_in_athlete_clubs(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryClub]
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_logged_in_athlete_clubs_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_logged_in_athlete_clubs_with_http_info(**kwargs)  # noqa: E501
@@ -465,20 +465,20 @@ class ClubsApi(object):
 
         Returns a list of the clubs whose membership includes the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_logged_in_athlete_clubs_with_http_info(async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_logged_in_athlete_clubs_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryClub]
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['page', 'per_page']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -526,7 +526,7 @@ class ClubsApi(object):
             files=local_var_files,
             response_type='list[SummaryClub]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -537,18 +537,18 @@ class ClubsApi(object):
 
         Adds the authenticated athlete to the club's membership.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.join_club_by_id(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.join_club_by_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the club. (required)
         :return: MembershipApplication
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.join_club_by_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.join_club_by_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -559,19 +559,19 @@ class ClubsApi(object):
 
         Adds the authenticated athlete to the club's membership.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.join_club_by_id_with_http_info(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.join_club_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the club. (required)
         :return: MembershipApplication
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -621,7 +621,7 @@ class ClubsApi(object):
             files=local_var_files,
             response_type='MembershipApplication',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -632,18 +632,18 @@ class ClubsApi(object):
 
         Removes the authenticated athlete from the club's membership.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.leave_club_by_id(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.leave_club_by_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the club. (required)
         :return: MembershipApplication
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.leave_club_by_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.leave_club_by_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -654,19 +654,19 @@ class ClubsApi(object):
 
         Removes the authenticated athlete from the club's membership.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.leave_club_by_id_with_http_info(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.leave_club_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the club. (required)
         :return: MembershipApplication
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -716,7 +716,7 @@ class ClubsApi(object):
             files=local_var_files,
             response_type='MembershipApplication',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

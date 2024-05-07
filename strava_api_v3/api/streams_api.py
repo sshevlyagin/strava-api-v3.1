@@ -38,20 +38,20 @@ class StreamsApi(object):
 
         Returns the given activity's streams.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_activity_streams(id, keys, key_by_type, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_activity_streams(id, keys, key_by_type, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :param list[str] keys: Desired stream types. (required)
         :param bool key_by_type: Must be true. (required)
         :return: StreamSet
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_activity_streams_with_http_info(id, keys, key_by_type, **kwargs)  # noqa: E501
         else:
             (data) = self.get_activity_streams_with_http_info(id, keys, key_by_type, **kwargs)  # noqa: E501
@@ -62,21 +62,21 @@ class StreamsApi(object):
 
         Returns the given activity's streams.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_activity_streams_with_http_info(id, keys, key_by_type, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_activity_streams_with_http_info(id, keys, key_by_type, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :param list[str] keys: Desired stream types. (required)
         :param bool key_by_type: Must be true. (required)
         :return: StreamSet
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['id', 'keys', 'key_by_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -142,7 +142,7 @@ class StreamsApi(object):
             files=local_var_files,
             response_type='StreamSet',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -153,20 +153,20 @@ class StreamsApi(object):
 
         Returns a set of streams for a segment effort completed by the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_segment_effort_streams(id, keys, key_by_type, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_segment_effort_streams(id, keys, key_by_type, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the segment effort. (required)
         :param list[str] keys: The types of streams to return. (required)
         :param bool key_by_type: Must be true. (required)
         :return: StreamSet
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_segment_effort_streams_with_http_info(id, keys, key_by_type, **kwargs)  # noqa: E501
         else:
             (data) = self.get_segment_effort_streams_with_http_info(id, keys, key_by_type, **kwargs)  # noqa: E501
@@ -177,21 +177,21 @@ class StreamsApi(object):
 
         Returns a set of streams for a segment effort completed by the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_segment_effort_streams_with_http_info(id, keys, key_by_type, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_segment_effort_streams_with_http_info(id, keys, key_by_type, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the segment effort. (required)
         :param list[str] keys: The types of streams to return. (required)
         :param bool key_by_type: Must be true. (required)
         :return: StreamSet
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['id', 'keys', 'key_by_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -257,7 +257,7 @@ class StreamsApi(object):
             files=local_var_files,
             response_type='StreamSet',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -268,20 +268,20 @@ class StreamsApi(object):
 
         Returns the given segment's streams.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_segment_streams(id, keys, key_by_type, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_segment_streams(id, keys, key_by_type, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the segment. (required)
         :param list[str] keys: The types of streams to return. (required)
         :param bool key_by_type: Must be true. (required)
         :return: StreamSet
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_segment_streams_with_http_info(id, keys, key_by_type, **kwargs)  # noqa: E501
         else:
             (data) = self.get_segment_streams_with_http_info(id, keys, key_by_type, **kwargs)  # noqa: E501
@@ -292,21 +292,21 @@ class StreamsApi(object):
 
         Returns the given segment's streams.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_segment_streams_with_http_info(id, keys, key_by_type, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_segment_streams_with_http_info(id, keys, key_by_type, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the segment. (required)
         :param list[str] keys: The types of streams to return. (required)
         :param bool key_by_type: Must be true. (required)
         :return: StreamSet
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['id', 'keys', 'key_by_type']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -372,7 +372,7 @@ class StreamsApi(object):
             files=local_var_files,
             response_type='StreamSet',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

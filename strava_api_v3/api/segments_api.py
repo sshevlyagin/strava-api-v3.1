@@ -38,21 +38,21 @@ class SegmentsApi(object):
 
         Returns the segments matching a specified query.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.explore_segments(bounds, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.explore_segments(bounds, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param list[float] bounds: The geographical boundaries of the search. (required)
         :param str activity_type: Desired activity type.
         :param int min_cat: The minimum climbing category.
         :param int max_cat: The maximum climbing category.
         :return: ExplorerResponse
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.explore_segments_with_http_info(bounds, **kwargs)  # noqa: E501
         else:
             (data) = self.explore_segments_with_http_info(bounds, **kwargs)  # noqa: E501
@@ -63,22 +63,22 @@ class SegmentsApi(object):
 
         Returns the segments matching a specified query.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.explore_segments_with_http_info(bounds, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.explore_segments_with_http_info(bounds, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param list[float] bounds: The geographical boundaries of the search. (required)
         :param str activity_type: Desired activity type.
         :param int min_cat: The minimum climbing category.
         :param int max_cat: The maximum climbing category.
         :return: ExplorerResponse
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['bounds', 'activity_type', 'min_cat', 'max_cat']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -149,7 +149,7 @@ class SegmentsApi(object):
             files=local_var_files,
             response_type='ExplorerResponse',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -160,11 +160,11 @@ class SegmentsApi(object):
 
         Returns the specified segment leaderboard.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_leaderboard_by_segment_id(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_leaderboard_by_segment_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the segment leaderboard. (required)
         :param str gender: Filter by gender.
         :param str age_group: Premium Feature. Filter by age group.
@@ -176,11 +176,11 @@ class SegmentsApi(object):
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: SegmentLeaderboard
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_leaderboard_by_segment_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_leaderboard_by_segment_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -191,11 +191,11 @@ class SegmentsApi(object):
 
         Returns the specified segment leaderboard.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_leaderboard_by_segment_id_with_http_info(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_leaderboard_by_segment_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the segment leaderboard. (required)
         :param str gender: Filter by gender.
         :param str age_group: Premium Feature. Filter by age group.
@@ -207,12 +207,12 @@ class SegmentsApi(object):
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: SegmentLeaderboard
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['id', 'gender', 'age_group', 'weight_class', 'following', 'club_id', 'date_range', 'context_entries', 'page', 'per_page']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -280,7 +280,7 @@ class SegmentsApi(object):
             files=local_var_files,
             response_type='SegmentLeaderboard',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -291,19 +291,19 @@ class SegmentsApi(object):
 
         List of the authenticated athlete's starred segments.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_logged_in_athlete_starred_segments(async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_logged_in_athlete_starred_segments(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummarySegment]
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_logged_in_athlete_starred_segments_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_logged_in_athlete_starred_segments_with_http_info(**kwargs)  # noqa: E501
@@ -314,20 +314,20 @@ class SegmentsApi(object):
 
         List of the authenticated athlete's starred segments.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_logged_in_athlete_starred_segments_with_http_info(async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_logged_in_athlete_starred_segments_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummarySegment]
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['page', 'per_page']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -375,7 +375,7 @@ class SegmentsApi(object):
             files=local_var_files,
             response_type='list[SummarySegment]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -386,18 +386,18 @@ class SegmentsApi(object):
 
         Returns the specified segment.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_segment_by_id(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_segment_by_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the segment. (required)
         :return: DetailedSegment
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_segment_by_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_segment_by_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -408,19 +408,19 @@ class SegmentsApi(object):
 
         Returns the specified segment.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_segment_by_id_with_http_info(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.get_segment_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the segment. (required)
         :return: DetailedSegment
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -470,7 +470,7 @@ class SegmentsApi(object):
             files=local_var_files,
             response_type='DetailedSegment',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -481,18 +481,18 @@ class SegmentsApi(object):
 
         Stars the given segment for the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.star_segment(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.star_segment(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the segment to star. (required)
         :return: DetailedSegment
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.star_segment_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.star_segment_with_http_info(id, **kwargs)  # noqa: E501
@@ -503,19 +503,19 @@ class SegmentsApi(object):
 
         Stars the given segment for the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.star_segment_with_http_info(id, async=True)
+        async_reqhronous HTTP request, please pass async_req=True
+        >>> thread = api.star_segment_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the segment to star. (required)
         :return: DetailedSegment
-                 If the method is called asynchronously,
+                 If the method is called async_reqhronously,
                  returns the request thread.
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -565,7 +565,7 @@ class SegmentsApi(object):
             files=local_var_files,
             response_type='DetailedSegment',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
