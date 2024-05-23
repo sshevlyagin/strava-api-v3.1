@@ -38,13 +38,13 @@ class AthletesApi(object):
 
         Returns the currently authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_logged_in_athlete(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :return: DetailedAthlete
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -59,13 +59,13 @@ class AthletesApi(object):
 
         Returns the currently authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_logged_in_athlete_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :return: DetailedAthlete
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
@@ -125,13 +125,13 @@ class AthletesApi(object):
 
         Returns the the authenticated athlete's heart rate and power zones.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_logged_in_athlete_zones(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :return: Zones
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -146,13 +146,13 @@ class AthletesApi(object):
 
         Returns the the authenticated athlete's heart rate and power zones.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_logged_in_athlete_zones_with_http_info(async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :return: Zones
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
@@ -212,7 +212,7 @@ class AthletesApi(object):
 
         Returns the activity stats of an athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_stats(id, async_req=True)
         >>> result = thread.get()
 
@@ -221,7 +221,7 @@ class AthletesApi(object):
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: ActivityStats
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -236,7 +236,7 @@ class AthletesApi(object):
 
         Returns the activity stats of an athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_stats_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
@@ -245,7 +245,7 @@ class AthletesApi(object):
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: ActivityStats
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
@@ -315,14 +315,14 @@ class AthletesApi(object):
 
         Update the currently authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_logged_in_athlete(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param DetailedAthlete body: The athlete entity to update. (required)
         :return: DetailedAthlete
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -337,14 +337,14 @@ class AthletesApi(object):
 
         Update the currently authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_logged_in_athlete_with_http_info(body, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param DetailedAthlete body: The athlete entity to update. (required)
         :return: DetailedAthlete
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 

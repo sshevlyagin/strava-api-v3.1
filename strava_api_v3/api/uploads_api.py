@@ -38,7 +38,7 @@ class UploadsApi(object):
 
         Uploads a new data file to create an activity from.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_upload(async_req=True)
         >>> result = thread.get()
 
@@ -52,7 +52,7 @@ class UploadsApi(object):
         :param str data_type: The format of the uploaded file.
         :param str external_id: The desired external identifier of the resulting activity.
         :return: Upload
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -67,7 +67,7 @@ class UploadsApi(object):
 
         Uploads a new data file to create an activity from.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_upload_with_http_info(async_req=True)
         >>> result = thread.get()
 
@@ -81,7 +81,7 @@ class UploadsApi(object):
         :param str data_type: The format of the uploaded file.
         :param str external_id: The desired external identifier of the resulting activity.
         :return: Upload
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
@@ -161,14 +161,14 @@ class UploadsApi(object):
 
         Returns an upload for a given identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_upload_by_id(upload_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int upload_id: The identifier of the upload. (required)
         :return: Upload
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -183,14 +183,14 @@ class UploadsApi(object):
 
         Returns an upload for a given identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_upload_by_id_with_http_info(upload_id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int upload_id: The identifier of the upload. (required)
         :return: Upload
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 

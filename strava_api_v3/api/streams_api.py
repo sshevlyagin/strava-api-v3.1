@@ -38,7 +38,7 @@ class StreamsApi(object):
 
         Returns the given activity's streams.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_activity_streams(id, keys, key_by_type, async_req=True)
         >>> result = thread.get()
 
@@ -62,7 +62,7 @@ class StreamsApi(object):
 
         Returns the given activity's streams.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_activity_streams_with_http_info(id, keys, key_by_type, async_req=True)
         >>> result = thread.get()
 
@@ -153,7 +153,7 @@ class StreamsApi(object):
 
         Returns a set of streams for a segment effort completed by the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_segment_effort_streams(id, keys, key_by_type, async_req=True)
         >>> result = thread.get()
 
@@ -177,7 +177,7 @@ class StreamsApi(object):
 
         Returns a set of streams for a segment effort completed by the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_segment_effort_streams_with_http_info(id, keys, key_by_type, async_req=True)
         >>> result = thread.get()
 
@@ -268,7 +268,7 @@ class StreamsApi(object):
 
         Returns the given segment's streams.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_segment_streams(id, keys, key_by_type, async_req=True)
         >>> result = thread.get()
 
@@ -292,7 +292,7 @@ class StreamsApi(object):
 
         Returns the given segment's streams.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_segment_streams_with_http_info(id, keys, key_by_type, async_req=True)
         >>> result = thread.get()
 

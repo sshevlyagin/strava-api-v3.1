@@ -38,7 +38,7 @@ class ClubsApi(object):
 
         Retrieve recent activities from members of a specific club. The authenticated athlete must belong to the requested club in order to hit this endpoint. Pagination is supported. Enhanced Privacy Mode is respected for all activities.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_club_activities_by_id(id, async_req=True)
         >>> result = thread.get()
 
@@ -47,7 +47,7 @@ class ClubsApi(object):
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryActivity]
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -62,7 +62,7 @@ class ClubsApi(object):
 
         Retrieve recent activities from members of a specific club. The authenticated athlete must belong to the requested club in order to hit this endpoint. Pagination is supported. Enhanced Privacy Mode is respected for all activities.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_club_activities_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
@@ -71,7 +71,7 @@ class ClubsApi(object):
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryActivity]
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
@@ -141,7 +141,7 @@ class ClubsApi(object):
 
         Returns a list of the administrators of a given club.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_club_admins_by_id(id, async_req=True)
         >>> result = thread.get()
 
@@ -150,7 +150,7 @@ class ClubsApi(object):
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryAthlete]
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -165,7 +165,7 @@ class ClubsApi(object):
 
         Returns a list of the administrators of a given club.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_club_admins_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
@@ -174,7 +174,7 @@ class ClubsApi(object):
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryAthlete]
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
@@ -244,14 +244,14 @@ class ClubsApi(object):
 
         Returns a given club using its identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_club_by_id(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: The identifier of the club. (required)
         :return: DetailedClub
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -266,14 +266,14 @@ class ClubsApi(object):
 
         Returns a given club using its identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_club_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: The identifier of the club. (required)
         :return: DetailedClub
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
@@ -339,7 +339,7 @@ class ClubsApi(object):
 
         Returns a list of the athletes who are members of a given club.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_club_members_by_id(id, async_req=True)
         >>> result = thread.get()
 
@@ -348,7 +348,7 @@ class ClubsApi(object):
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryAthlete]
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -363,7 +363,7 @@ class ClubsApi(object):
 
         Returns a list of the athletes who are members of a given club.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_club_members_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
@@ -372,7 +372,7 @@ class ClubsApi(object):
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryAthlete]
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
@@ -442,7 +442,7 @@ class ClubsApi(object):
 
         Returns a list of the clubs whose membership includes the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_logged_in_athlete_clubs(async_req=True)
         >>> result = thread.get()
 
@@ -450,7 +450,7 @@ class ClubsApi(object):
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryClub]
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -465,7 +465,7 @@ class ClubsApi(object):
 
         Returns a list of the clubs whose membership includes the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_logged_in_athlete_clubs_with_http_info(async_req=True)
         >>> result = thread.get()
 
@@ -473,7 +473,7 @@ class ClubsApi(object):
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
         :return: list[SummaryClub]
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
@@ -537,14 +537,14 @@ class ClubsApi(object):
 
         Adds the authenticated athlete to the club's membership.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.join_club_by_id(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: The identifier of the club. (required)
         :return: MembershipApplication
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -559,14 +559,14 @@ class ClubsApi(object):
 
         Adds the authenticated athlete to the club's membership.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.join_club_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: The identifier of the club. (required)
         :return: MembershipApplication
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
@@ -632,14 +632,14 @@ class ClubsApi(object):
 
         Removes the authenticated athlete from the club's membership.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.leave_club_by_id(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: The identifier of the club. (required)
         :return: MembershipApplication
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -654,14 +654,14 @@ class ClubsApi(object):
 
         Removes the authenticated athlete from the club's membership.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.leave_club_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param int id: The identifier of the club. (required)
         :return: MembershipApplication
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 

@@ -38,7 +38,7 @@ class GearsApi(object):
 
         Returns an equipment using its identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_gear_by_id(id, async_req=True)
         >>> result = thread.get()
 
@@ -60,7 +60,7 @@ class GearsApi(object):
 
         Returns an equipment using its identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        async_reqhronous HTTP request, please pass async_req=True
+        asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_gear_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
