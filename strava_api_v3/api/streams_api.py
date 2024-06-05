@@ -47,7 +47,7 @@ class StreamsApi(object):
         :param list[str] keys: Desired stream types. (required)
         :param bool key_by_type: Must be true. (required)
         :return: StreamSet
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -71,7 +71,7 @@ class StreamsApi(object):
         :param list[str] keys: Desired stream types. (required)
         :param bool key_by_type: Must be true. (required)
         :return: StreamSet
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
@@ -162,7 +162,7 @@ class StreamsApi(object):
         :param list[str] keys: The types of streams to return. (required)
         :param bool key_by_type: Must be true. (required)
         :return: StreamSet
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -186,7 +186,7 @@ class StreamsApi(object):
         :param list[str] keys: The types of streams to return. (required)
         :param bool key_by_type: Must be true. (required)
         :return: StreamSet
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
@@ -277,7 +277,7 @@ class StreamsApi(object):
         :param list[str] keys: The types of streams to return. (required)
         :param bool key_by_type: Must be true. (required)
         :return: StreamSet
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -301,7 +301,7 @@ class StreamsApi(object):
         :param list[str] keys: The types of streams to return. (required)
         :param bool key_by_type: Must be true. (required)
         :return: StreamSet
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 

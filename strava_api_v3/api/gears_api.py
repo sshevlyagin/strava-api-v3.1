@@ -45,7 +45,7 @@ class GearsApi(object):
         :param async_req bool
         :param int id: The identifier of the gear. (required)
         :return: DetailedGear
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
@@ -67,7 +67,7 @@ class GearsApi(object):
         :param async_req bool
         :param int id: The identifier of the gear. (required)
         :return: DetailedGear
-                 If the method is called async_reqhronously,
+                 If the method is called asynchronously,
                  returns the request thread.
         """
 
