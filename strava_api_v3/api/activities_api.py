@@ -38,11 +38,11 @@ class ActivitiesApi(object):
 
         Creates a manual activity for an athlete. Requires write permissions, as requested during the authorization process.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_activity(name, type, start_date_local, elapsed_time, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_activity(name, type, start_date_local, elapsed_time, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str name: The name of the activity. (required)
         :param str type: Type of activity. For example - Run, Ride etc. (required)
         :param str start_date_local: ISO 8601 formatted date time. (required)
@@ -58,7 +58,7 @@ class ActivitiesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_activity_with_http_info(name, type, start_date_local, elapsed_time, **kwargs)  # noqa: E501
         else:
             (data) = self.create_activity_with_http_info(name, type, start_date_local, elapsed_time, **kwargs)  # noqa: E501
@@ -69,11 +69,11 @@ class ActivitiesApi(object):
 
         Creates a manual activity for an athlete. Requires write permissions, as requested during the authorization process.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_activity_with_http_info(name, type, start_date_local, elapsed_time, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_activity_with_http_info(name, type, start_date_local, elapsed_time, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str name: The name of the activity. (required)
         :param str type: Type of activity. For example - Run, Ride etc. (required)
         :param str start_date_local: ISO 8601 formatted date time. (required)
@@ -90,7 +90,7 @@ class ActivitiesApi(object):
         """
 
         all_params = ['name', 'type', 'start_date_local', 'elapsed_time', 'description', 'distance', 'private', 'trainer', 'photo_ids', 'commute']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -170,7 +170,7 @@ class ActivitiesApi(object):
             files=local_var_files,
             response_type='DetailedActivity',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -181,11 +181,11 @@ class ActivitiesApi(object):
 
         Returns the given activity that is owned by the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_activity_by_id(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_activity_by_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :param bool include_all_efforts: To include all segments efforts.
         :return: DetailedActivity
@@ -193,7 +193,7 @@ class ActivitiesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_activity_by_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_activity_by_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -204,11 +204,11 @@ class ActivitiesApi(object):
 
         Returns the given activity that is owned by the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_activity_by_id_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_activity_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :param bool include_all_efforts: To include all segments efforts.
         :return: DetailedActivity
@@ -217,7 +217,7 @@ class ActivitiesApi(object):
         """
 
         all_params = ['id', 'include_all_efforts']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -269,7 +269,7 @@ class ActivitiesApi(object):
             files=local_var_files,
             response_type='DetailedActivity',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -280,11 +280,11 @@ class ActivitiesApi(object):
 
         Returns the comments on the given activity.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comments_by_activity_id(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_comments_by_activity_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
@@ -293,7 +293,7 @@ class ActivitiesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_comments_by_activity_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_comments_by_activity_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -304,11 +304,11 @@ class ActivitiesApi(object):
 
         Returns the comments on the given activity.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comments_by_activity_id_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_comments_by_activity_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
@@ -318,7 +318,7 @@ class ActivitiesApi(object):
         """
 
         all_params = ['id', 'page', 'per_page']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -372,7 +372,7 @@ class ActivitiesApi(object):
             files=local_var_files,
             response_type='list[Comment]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -383,11 +383,11 @@ class ActivitiesApi(object):
 
         Returns the athletes who kudoed an activity identified by an identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_kudoers_by_activity_id(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_kudoers_by_activity_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
@@ -396,7 +396,7 @@ class ActivitiesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_kudoers_by_activity_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_kudoers_by_activity_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -407,11 +407,11 @@ class ActivitiesApi(object):
 
         Returns the athletes who kudoed an activity identified by an identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_kudoers_by_activity_id_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_kudoers_by_activity_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
@@ -421,7 +421,7 @@ class ActivitiesApi(object):
         """
 
         all_params = ['id', 'page', 'per_page']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -475,7 +475,7 @@ class ActivitiesApi(object):
             files=local_var_files,
             response_type='list[SummaryAthlete]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -486,18 +486,18 @@ class ActivitiesApi(object):
 
         Returns the laps of an activity identified by an identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_laps_by_activity_id(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_laps_by_activity_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :return: list[Lap]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_laps_by_activity_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_laps_by_activity_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -508,11 +508,11 @@ class ActivitiesApi(object):
 
         Returns the laps of an activity identified by an identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_laps_by_activity_id_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_laps_by_activity_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :return: list[Lap]
                  If the method is called asynchronously,
@@ -520,7 +520,7 @@ class ActivitiesApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -570,7 +570,7 @@ class ActivitiesApi(object):
             files=local_var_files,
             response_type='list[Lap]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -581,11 +581,11 @@ class ActivitiesApi(object):
 
         Returns the activities of an athlete for a specific identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_logged_in_athlete_activities(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_logged_in_athlete_activities(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int before: An epoch timestamp to use for filtering activities that have taken place before a certain time.
         :param int after: An epoch timestamp to use for filtering activities that have taken place after a certain time.
         :param int page: Page number.
@@ -595,7 +595,7 @@ class ActivitiesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_logged_in_athlete_activities_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_logged_in_athlete_activities_with_http_info(**kwargs)  # noqa: E501
@@ -606,11 +606,11 @@ class ActivitiesApi(object):
 
         Returns the activities of an athlete for a specific identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_logged_in_athlete_activities_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_logged_in_athlete_activities_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int before: An epoch timestamp to use for filtering activities that have taken place before a certain time.
         :param int after: An epoch timestamp to use for filtering activities that have taken place after a certain time.
         :param int page: Page number.
@@ -621,7 +621,7 @@ class ActivitiesApi(object):
         """
 
         all_params = ['before', 'after', 'page', 'per_page']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -673,7 +673,7 @@ class ActivitiesApi(object):
             files=local_var_files,
             response_type='list[SummaryActivity]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -684,18 +684,18 @@ class ActivitiesApi(object):
 
         Premium Feature. Returns the zones of a given activity.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zones_by_activity_id(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_zones_by_activity_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :return: list[ActivityZone]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_zones_by_activity_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_zones_by_activity_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -706,11 +706,11 @@ class ActivitiesApi(object):
 
         Premium Feature. Returns the zones of a given activity.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zones_by_activity_id_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_zones_by_activity_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :return: list[ActivityZone]
                  If the method is called asynchronously,
@@ -718,7 +718,7 @@ class ActivitiesApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -768,7 +768,7 @@ class ActivitiesApi(object):
             files=local_var_files,
             response_type='list[ActivityZone]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -779,11 +779,11 @@ class ActivitiesApi(object):
 
         Updates the given activity that is owned by the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_activity_by_id(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_activity_by_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :param UpdatableActivity body:
         :return: DetailedActivity
@@ -791,7 +791,7 @@ class ActivitiesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_activity_by_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.update_activity_by_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -802,11 +802,11 @@ class ActivitiesApi(object):
 
         Updates the given activity that is owned by the authenticated athlete.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_activity_by_id_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_activity_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the activity. (required)
         :param UpdatableActivity body:
         :return: DetailedActivity
@@ -815,7 +815,7 @@ class ActivitiesApi(object):
         """
 
         all_params = ['id', 'body']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -867,7 +867,7 @@ class ActivitiesApi(object):
             files=local_var_files,
             response_type='DetailedActivity',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

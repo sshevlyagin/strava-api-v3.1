@@ -38,18 +38,18 @@ class RoutesApi(object):
 
         Returns a route using its identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_route_by_id(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_route_by_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the route. (required)
         :return: Route
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_route_by_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_route_by_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class RoutesApi(object):
 
         Returns a route using its identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_route_by_id_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_route_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the route. (required)
         :return: Route
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class RoutesApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -122,7 +122,7 @@ class RoutesApi(object):
             files=local_var_files,
             response_type='Route',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -133,11 +133,11 @@ class RoutesApi(object):
 
         Returns a list of the routes created by the authenticated athlete using their athlete ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_routes_by_athlete_id(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_routes_by_athlete_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the athlete. (required)
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
@@ -146,7 +146,7 @@ class RoutesApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_routes_by_athlete_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_routes_by_athlete_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -157,11 +157,11 @@ class RoutesApi(object):
 
         Returns a list of the routes created by the authenticated athlete using their athlete ID.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_routes_by_athlete_id_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_routes_by_athlete_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the athlete. (required)
         :param int page: Page number.
         :param int per_page: Number of items per page. Defaults to 30.
@@ -171,7 +171,7 @@ class RoutesApi(object):
         """
 
         all_params = ['id', 'page', 'per_page']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -225,7 +225,7 @@ class RoutesApi(object):
             files=local_var_files,
             response_type='list[Route]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),

@@ -38,18 +38,18 @@ class RunningRacesApi(object):
 
         Returns a running race for a given identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_running_race_by_id(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_running_race_by_id(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the running race. (required)
         :return: RunningRace
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_running_race_by_id_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_running_race_by_id_with_http_info(id, **kwargs)  # noqa: E501
@@ -60,11 +60,11 @@ class RunningRacesApi(object):
 
         Returns a running race for a given identifier.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_running_race_by_id_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_running_race_by_id_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int id: The identifier of the running race. (required)
         :return: RunningRace
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class RunningRacesApi(object):
         """
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -122,7 +122,7 @@ class RunningRacesApi(object):
             files=local_var_files,
             response_type='RunningRace',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
@@ -133,18 +133,18 @@ class RunningRacesApi(object):
 
         Returns a list running races based on a set of search criteria.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_running_races(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_running_races(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int year: Filters the list by a given year.
         :return: list[RunningRace]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_running_races_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_running_races_with_http_info(**kwargs)  # noqa: E501
@@ -155,11 +155,11 @@ class RunningRacesApi(object):
 
         Returns a list running races based on a set of search criteria.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_running_races_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_running_races_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param int year: Filters the list by a given year.
         :return: list[RunningRace]
                  If the method is called asynchronously,
@@ -167,7 +167,7 @@ class RunningRacesApi(object):
         """
 
         all_params = ['year']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -213,7 +213,7 @@ class RunningRacesApi(object):
             files=local_var_files,
             response_type='list[RunningRace]',  # noqa: E501
             auth_settings=auth_settings,
-            async=params.get('async'),
+            async_req=params.get('async_req'),
             _return_http_data_only=params.get('_return_http_data_only'),
             _preload_content=params.get('_preload_content', True),
             _request_timeout=params.get('_request_timeout'),
